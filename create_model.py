@@ -1,4 +1,5 @@
 import os
+os.environ['KERAS_BACKEND'] = 'theano'
 import numpy
 import numpy as np
 from keras.layers import Dense, Dropout, LSTM, Activation, Reshape
