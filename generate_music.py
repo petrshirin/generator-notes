@@ -1,3 +1,6 @@
+import os
+os.environ['KERAS_BACKEND'] = 'theano'
+
 from music21.note import Note
 from music21.chord import Chord
 from music21 import instrument, stream
@@ -77,7 +80,7 @@ class Music:
 
 seq_len = 50
 
-EPOCH = 2
+EPOCH = 1
 MODEL_FILE_NAME = f'models/Model_Epoch{EPOCH}.h5'
 mypath = 'music/'
 files = [f for f in listdir(mypath) if isfile(join(mypath, f))]

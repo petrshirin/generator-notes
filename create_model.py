@@ -1,17 +1,17 @@
+import os
 import numpy
 import numpy as np
-from keras.utils import to_categorical
 from keras.layers import Dense, Dropout, LSTM, Activation, Reshape
 from keras.models import Sequential, load_model
-from tensorflow.keras.callbacks import ModelCheckpoint
+from keras.callbacks import ModelCheckpoint
 from os import listdir
 from os.path import isfile, join
 from parse_music import MidiFilesContainer, MidiFile
-from tensorflow.keras.callbacks import EarlyStopping
+
 
 seq_len = 50
 
-EPOCH = 2
+EPOCH = 1
 MODEL_FILE_NAME = f'models/Model_Epoch{EPOCH}.h5'
 mypath = 'music/'
 files = [f for f in listdir(mypath) if isfile(join(mypath, f))]
